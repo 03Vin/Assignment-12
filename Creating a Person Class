@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+
+class Person {
+private:
+    std::string firstName;
+    std::string lastName;
+    int age;
+
+public:
+    Person(std::string fName, std::string lName, int a) {
+        firstName = fName;
+        lastName = lName;
+        age = a;
+    }
+
+    std::string getFullName() {
+        return firstName + " " + lastName;
+    }
+
+    void getDetails() {
+        std::cout << "First Name: " << firstName << std::endl;
+        std::cout << "Last Name: " << lastName << std::endl;
+        std::cout << "Age: " << age << std::endl;
+    }
+};
+
+int main() {
+    Person person("John", "Doe", 30);
+
+    std::cout << "Full Name: " << person.getFullName() << std::endl;
+
+    person.getDetails();
+
+    return 0;
+}
